@@ -17,7 +17,7 @@ FROM openjdk:11-jre-slim-buster
 EXPOSE 8080
 
 # Copiar el archivo JAR construido desde la etapa anterior
-COPY --from=build /app/build/libs/demo-0.0.1-SNAPSHOT.jar /app/demo-0.0.1-SNAPSHOT.jar
+COPY --from=build /app/build/libs/nutricion-backend-0.0.1-SNAPSHOT.jar /app/nutricion-backend-0.0.1-SNAPSHOT.jar
 
 # Establecer el punto de entrada para ejecutar la aplicación
-ENTRYPOINT ["java", "-jar", "/app/demo-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "/app/nutricion-backend-0.0.1-SNAPSHOT.jar"]
